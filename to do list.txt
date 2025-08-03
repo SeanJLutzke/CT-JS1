@@ -1,0 +1,11 @@
+to do list
+-Toast notification (NEEDS JS)
+-Carousel for image gallery (DONE sort of)
+-Accordion for FAQ (DONE)
+-Make a form for adding user data so that we can tie it in with the table using JS later.
+
+
+JS to do list
+-post form data
+-append with user info
+- Add button "I want the truth" or something

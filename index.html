@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+
+
+
+    <!-- Navbar that utilizes bootstrap-->
+    <nav class="navbar navbar-expand-lg navbar-info bg-info fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#maincontent">Where do Babies Come From?</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#MeetTheTeamCarousel">Meet The Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#FAQaccordion">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="looking_at_ultrasounds.jpg" id="hero">
+
+    <!--title for about us section (increase font size later)-->
+    <h1 id="about">Who we are</h1>
+
+    <!--description text for About us section-->
+    <h2>At Where Do Babies Come From, we're committed to finding out where babies come from. We've talked to experts all
+        over the world. Men say they don't know and even women who have kids say they can't remember. They must be
+        coming form somewhere. The question is: Where? We won't rest until we find out.
+    </h2>
+
+
+    <!--Form section-->
+    <img src="team of analysts.jpg">
+
+    <!--Form title -->
+    <h1 id="contact">Contact Us</h1>
+
+    <!--Form Content-->
+    <h2 class="text-center text-primary mt-5">Tip Line</h2>
+    <form class="border p-4 shadow-sm bg-primary">
+        <div class="row">
+            <div class="col-6 p-2">
+                <input type="text" class="form-control mb-3" placeholder="First Name" autocomplete="given-name">
+            </div>
+            <div class="col-6 p-2">
+                <input type="text" class="form-control mb-3" placeholder="Last Name" autocomplete="family-name">
+            </div>
+        </div>
+        <input type="email" class="form-control mb-3" placeholder="Email Address" autocomplete="email">
+        <input type="password" class="form-control mb-3" placeholder="Choose a Strong Password"
+            autocomplete="new-password">
+        <input type="text" class="form-control" id="message" name="message"
+            placeholder="Enter the information you wish to provide us with here.">
+        <input class="form-check-input mb-3" type="checkbox" id="ToS_Checkbox">
+        <label class="form-check-label" for="Submit Button"> Click to agree to ToS and Privacy Policy</label>
+        <button class="btn btn-success w-100" id="submitNewUser">Submit</button>
+    </form>
+
+
+
+    <!--Table of babies that have been found-->
+
+    <div class="table-responsive"></div>
+    <table class="table table-striped table-hover border mt-3" id="BabiesTable">Babies We've Found
+        <thead class="table-dark"></thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Notable Features</th>
+        </tr>
+        <tr>
+            <td>Little Timmy</td>
+            <td>Male</td>
+            <td>no belly button</td>
+        </tr>
+        <tr>
+            <td>Sally</td>
+            <td>Female</td>
+            <td>smells bad</td>
+        </tr>
+        <tr>
+            <td>Bert</td>
+            <td>Male</td>
+            <td>bald </td>
+        </tr>
+        <tr>
+            <td>Sal Monilla</td>
+            <td>Male</td>
+            <td>gross egg-Shaped head</td>
+        </tr>
+        <tr>
+            <td>Helga </td>
+            <td>Female</td>
+            <td>unibrow</td>
+        </tr>
+        <tr>
+            <td>Galaknor the Destroyer </td>
+            <td>N/A </td>
+            <td>⸸ ⚚ ☍ ⌖ ⍟ ✠ ⚶ 𓂀 𐍈 ꙮ</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--Toast Notification for completing the form-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" alt="Thank you notifcation">
+        <div class="toast text-dark fs-5 w-100" id="formToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="" class="rounded me-2">
+                <strong class="me-auto">wheredobabiescomefrom.com</strong>
+                <small>0 minutes ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Thank You for your contribution. Every one brings us one step closer to the truth.
+            </div>
+        </div>
+    </div>
+
+
+    <!--toast styling-->
+    <style>
+        .toast-container {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1055;
+
+        }
+    </style>
+
+    <!--Add babies you've found-->
+    <h2 class="text-center text-primary mt-5">Add Babies You've found</h2>
+    <form class="border p-4 shadow-sm bg-primary" id="foundBabiesForm">
+
+        <input type="text" class="form-control mb-3" id="nameForm" placeholder="Enter the baby's name here.">
+        <input type="text" class="form-control mb-3" id="genderForm" name="message"
+            placeholder="Enter the baby's gender here.">
+        <input type="text" class="form-control mb-3" id="notableFeaturesForm" name="message"
+            placeholder="Enter any notable features here.">
+        <input class="form-check-input mb-3" type="checkbox" id="babyCheckbox">
+        <label class="form-check-label" for="Submit Button"> Click to agree to ToS and Privacy Policy</label>
+        <button class="btn btn-success w-100" id="submitBaby">Submit</button>
+    </form>
+
+    <!--Meet the Team Carousel-->
+
+    <h1>Meet the Team</h1>
+
+    <div id="MeetTheTeamCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="pvt_eye - Copy.png" class="d-block w-100" alt="">
+                <h3>This is Private I. Private Eye. If he can't see it no one can.</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="Private_Eye_Final.png" class="d-block w-100" alt="">
+                <h3>This is Private I. Private Eye. If he can't see it no one can.</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="pvt_no_eyes.png" class="d-block w-100" alt="">
+                <h3>This is Private No Eyes.</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="pvt_no_eyes_driving.png" class="d-block w-100" alt="">
+                <h3>This is Private No Eyes.</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="Bones_smoking.png" class="d-block w-100" alt="Private Bones">
+                <h3>This is Bones.</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="Bones_in_car.png" class="d-block w-100" alt="">
+                <h3>This is Bones.</h3>
+            </div>
+        </div>
+        <!--Carousel Buttons-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#MeetTheTeamCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#MeetTheTeamCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    </div>
+
+    <!--Accordion for FAQ-->
+
+    <div class="accordion" id="FAQaccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    What do you mean "figure out where babies come from"?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse collapsed" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <strong>What do you mean "figure out where babies come from"?</strong> We intend to search far and
+                    wide until we find out where babies come from. Nothing Will stand in our way.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Are you guys serious?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <strong>Are you guys serious?</strong> We're dead serious. We want answers and we want them now.
+                    There's nothing we won't do in order to crack this case.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Who's funding this?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <strong>Who's funding this?</strong> We're self funded.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    There's a lot of alcohol in those pictures. Do you guys drink on the Job?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                <div class="accordion-body">
+                    <strong>There's a lot of alcohol in those pictures. Do you guys drink on the Job?</strong> Yes.
+                    Perks of being a detective.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js"> </script>
+
+
+
+    <!--Import Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
